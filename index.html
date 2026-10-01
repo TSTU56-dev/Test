@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hearthlane Coffee — Beans, brew, and office service</title>
+    <meta
+      name="description"
+      content="Hearthlane Coffee roasts small-batch beans and runs coffee service for homes, offices, and events."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="logo" href="#top">Hearthlane</a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#shop">Shop</a>
+          <a href="#services">Service</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="cart-btn" type="button" data-open-cart>
+          Cart <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__copy">
+          <p class="eyebrow">Roastery · Subscription · Office service</p>
+          <h1>Coffee that shows up ready to work.</h1>
+          <p class="lede">
+            We roast in small lots and deliver beans, brew kits, and full coffee
+            service for kitchens, studios, and offices that care how the day
+            starts.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#shop">Shop beans</a>
+            <a class="btn btn--ghost" href="#services">Book a service</a>
+          </div>
+        </div>
+        <figure class="hero__photo">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80"
+            alt="Fresh espresso poured into a ceramic cup"
+          />
+        </figure>
+      </section>
+
+      <section class="strip" aria-label="Highlights">
+        <p>Shipped 48 hours after roast</p>
+        <p>Office restock every week or two</p>
+        <p>Brew training included with service plans</p>
+      </section>
+
+      <section class="shop" id="shop">
+        <div class="section-head">
+          <h2>The shop</h2>
+          <p>Whole bean by default. Ground to order if you tell us your brew method at checkout.</p>
+        </div>
+        <div class="filters" role="tablist" aria-label="Product filters">
+          <button class="chip is-on" type="button" data-filter="all">All</button>
+          <button class="chip" type="button" data-filter="beans">Beans</button>
+          <button class="chip" type="button" data-filter="kits">Brew kits</button>
+          <button class="chip" type="button" data-filter="gifts">Gifts</button>
+        </div>
+        <div class="grid" data-product-grid></div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="section-head">
+          <h2>Coffee as a service</h2>
+          <p>
+            Not just a bag on the porch. We keep your bar stocked, your machine
+            honest, and your people caffeinated.
+          </p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <h3>Home lane</h3>
+            <p class="price">$28<span>/month</span></p>
+            <p>Two 12 oz bags, rotating origin, tasting notes in every box.</p>
+            <button type="button" class="btn btn--solid" data-add-plan="home">
+              Add home plan
+            </button>
+          </article>
+          <article class="plan plan--featured">
+            <p class="badge">Most offices</p>
+            <h3>Studio lane</h3>
+            <p class="price">$149<span>/month</span></p>
+            <p>
+              Weekly restock for 8–20 people, filters, milk alt option, and a
+              20-minute staff brew walkthrough.
+            </p>
+            <button type="button" class="btn btn--solid" data-add-plan="studio">
+              Add studio plan
+            </button>
+          </article>
+          <article class="plan">
+            <h3>House lane</h3>
+            <p class="price">$390<span>/month</span></p>
+            <p>
+              Full pantry for 20–60 people, equipment check, and event catering
+              twice a quarter.
+            </p>
+            <button type="button" class="btn btn--solid" data-add-plan="house">
+              Add house plan
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <img
+          src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80"
+          alt="Roasted coffee beans in a wooden tray"
+        />
+        <div>
+          <p class="eyebrow">From the roastery</p>
+          <h2>We sell the product. We also run the ritual.</h2>
+          <p>
+            Hearthlane started as a two-kilo drum in a shared kitchen. The
+            beans still come off that same curve: light enough to taste origin,
+            dark enough to hold milk. The service side grew because shops and
+            offices kept asking us to stop dropping bags and start owning the
+            bar.
+          </p>
+          <p>
+            You can buy a single origin tonight. Or we can show up on Monday
+            with inventory, a clean machine, and a standing order that does not
+            forget itself.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-head">
+          <h2>Tell us what you need</h2>
+          <p>Wholesale, catering, or a custom office setup. We reply within one business day.</p>
+        </div>
+        <form class="form" data-contact-form>
+          <label>
+            Name
+            <input name="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required autocomplete="email" />
+          </label>
+          <label class="form__full">
+            Message
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="btn btn--solid" type="submit">Send note</button>
+          <p class="form-note" data-form-note hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>© <span data-year></span> Hearthlane Coffee. Roasted to order.</p>
+      <p>hello@hearthlane.example · Open Tue–Sat, 8–4</p>
+    </footer>
+
+    <aside class="drawer" data-cart-drawer hidden>
+      <div class="drawer__panel" role="dialog" aria-labelledby="cart-title">
+        <div class="drawer__head">
+          <h2 id="cart-title">Your order</h2>
+          <button type="button" class="icon-btn" data-close-cart aria-label="Close cart">
+            ×
+          </button>
+        </div>
+        <ul class="cart-list" data-cart-list></ul>
+        <p class="cart-empty" data-cart-empty>Nothing in the cart yet.</p>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong data-cart-total>$0.00</strong>
+        </div>
+        <form class="checkout" data-checkout>
+          <label>
+            Email for receipt
+            <input name="email" type="email" required />
+          </label>
+          <button class="btn btn--solid btn--block" type="submit">Place order</button>
+          <p class="form-note" data-checkout-note hidden></p>
+        </form>
+      </div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
